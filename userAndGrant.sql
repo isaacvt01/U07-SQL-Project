@@ -1,0 +1,3 @@
+CREATE USER isaac WITH PASSWORD '2808';
+
+GRANT SELECT ON Products TO isaac;
