@@ -1,5 +1,22 @@
 # U07-SQL-Project
 
+## Index
+- [Introduction](#introduction)
+- [Create_DB.sql](#createdb)
+- [Queries.sql](#queries)
+- [Uploadimage.py & seeimage.py](#blob)
+- [Indexes](#indexes)
+- [User and privileges](#user)
+- [Conclusion](#conclusion)
+
+
+
+
+
+
+
+<div id= "introduction" >
+
 ## Introduction
 
 We had to create a project that combines the different things we have learned in this work unit:
@@ -23,7 +40,7 @@ Date, time or timestamp data types: PostgreSQL supports several date and time re
 
 
 
-
+<div id = "createdb">
 ## create_db.sql
 In createdb.sql we create a database schema with five tables: Categories, Customer, Orders, Brands, and Products. 
 Each table has columns that define the structure of the data to be stored in it.
@@ -38,6 +55,7 @@ Each table has columns that define the structure of the data to be stored in it.
 
 - Products table: ProductID (an auto-incrementing integer), Name (a string up to 50 characters), Description (a string up to 255 characters), Price (a decimal number with up to 10 digits and 2 decimal places), BrandID (a foreign key that references the Brands table on the BrandID column), CategoryID (a foreign key that references the Categories table on the CategoryID column), and Image (binary data). Additionally, there is a foreign key constraint added to the Products table that references the Categories table on the CategoryID column, and the ON DELETE action is set to CASCADE. This means that if a category is deleted, all products in that category are also deleted.
 
+<div id = "queries">
 ## queries.sql
 
 We created 3 queries:
@@ -48,8 +66,9 @@ We created 3 queries:
 
 - The third query calculates the total sales for the past 3 months.
 
-
-## uploadimage.py & seeimage.py
+<div id = "blob">
+  
+## Uploadimage.py & Seeimage.py
 
 We have created a script that uses the psycopg2 library to connect to our PostgreSQL database and to insert an image. 
 We have described each step performed in UploadImage.py file to insert the image and SeeImage.py to see the image we have inserted.
@@ -62,19 +81,21 @@ First install everything in the requirements.txt with the following command:
 
 The lines of the database connection must also be changed, since that is from the docker container that we had locally.
 
+<div id = "indexes">
 ## Indexes
 
 We create the indexes of the category id in products and also of the customer id in orders.
 
 This was simply to simulate that we were creating indexes of the things that we anticipated would be used the most.
-
+<div id = "user">
 ## Users and privileges
 
 As you can see in the User_and_grant.sql file, we created a user named isaac with the password '2808'.
 
 We only gave him privileges to make selects in the product table.
 
-
+<div id = "conclusion">
+  
 ## Conclusion
 
 With the work we have done, we have learned new things that we can integrate into our database. We found it very interesting to be able to combine Python with our PostgreSQL database and to be able to insert and collect images from it, even to open images directly with our Python application.
