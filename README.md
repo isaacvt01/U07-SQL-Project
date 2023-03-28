@@ -19,8 +19,8 @@ Each table has columns that define the structure of the data to be stored in it.
 
 We created 3 queries:
 
-The first query retrieves all rows from the "Orders" table where the "OrderDate" column is greater than or equal to the date that is 30 days before the current date and time.
+- The first query retrieves all rows from the "Orders" table where the "OrderDate" column is greater than or equal to the date that is 30 days before the current date and time.
 
-The second query calculates the number of orders in each month of the current year.
+- The second query calculates the number of orders in each month of the current year.
 
-The third query calculates the total sales for the past 3 months.
+- The third query calculates the total sales for the past 3 months.
