@@ -2,17 +2,25 @@
 
 ## INTRODUCTION
 
-Create a project that combines the different things we have learned in this work unit:
-- Integrity constraints
-- Referential integrity
-- Cascading actions in referential integrity
-- Date, time or timestamp data types
-- Binary large objects
-- Domains
-- Indexes
-- Users
-- Privileges
-- Roles
+We had to create a project that combines the different things we have learned in this work unit:
+
+- `Integrity constraints:` Integrity constraints are used to ensure that data stored in a database is accurate and consistent. Constraints can be data type constraints, unique key constraints, primary key constraints, check constraints, null constraints, among others. An example would be to have a null constraint on a column that does not allow the insertion of null values.
+
+- `Referential integrity:` Referential integrity is a constraint that ensures that data in one table matches data in another table. For example, if a table has a foreign key that references a primary key in another table, referential integrity ensures that the data in the secondary table cannot contain values that do not exist in the primary table.
+
+- `Cascading actions in referential integrity:` Cascading actions are options that can be specified for a referential integrity constraint. These options indicate what action to take when updating or deleting a row in the main table. Options include "cascade", which automatically updates or deletes corresponding rows in the child table, "restrict", which prevents updating or deleting rows in the primary table that have corresponding rows in the child table, among others.
+Date, time or timestamp data types: PostgreSQL supports several date and time related data types, such as DATE, TIME, TIMESTAMP, INTERVAL, among others. For example, a table column can be of type TIMESTAMP to store the exact date and time of a transaction.
+
+- `Binary large objects:` Binary large objects (BLOBs) are large binary data that can be stored in a database. PostgreSQL supports BLOBs through the BYTEA data type. An example of use could be to store image or sound files.
+
+- `Domains:` A domain is a custom data type definition that can be applied to multiple columns in one or more tables. For example, you could create a domain called "email_address" to store email addresses and apply this domain to corresponding columns in different tables.
+
+- `Indexes:` Indexes are data structures used to speed up queries in a database. PostgreSQL supports several types of indexes, such as B-tree indexes, hash indexes, GiST indexes, among others. For example, you could create a B-tree index on a column in a table to speed up queries using that column.
+
+- `Users:` In PostgreSQL, users are used to authenticate to the database and access resources. Users can have different levels of permissions and restrictions. For example, you could create a user named "admin" with full permissions on a database.
+
+- `Privileges:` Privileges are specific permissions granted to users to access resources in a database.
+
 
 
 
