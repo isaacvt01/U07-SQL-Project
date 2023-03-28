@@ -1,5 +1,8 @@
 -- Define a custom data type called "email" that is a string with a maximum length of 100 characters.
-CREATE DOMAIN email AS varchar(100);
+CREATE DOMAIN email AS VARCHAR(100)
+   CHECK (
+      VALUE ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$'
+   );
 
 -- Create a table called "Categories" with columns for a category ID (auto-incrementing), category name, and category description.
 CREATE TABLE Categories (
