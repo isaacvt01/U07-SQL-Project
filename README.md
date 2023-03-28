@@ -1,5 +1,20 @@
 # U07-SQL-Project
 
+## INTRODUCTION
+
+Create a project that combines the different things we have learned in this work unit:
+- Integrity constraints
+- Referential integrity
+- Cascading actions in referential integrity
+- Date, time or timestamp data types
+- Binary large objects
+- Domains
+- Indexes
+- Users
+- Privileges
+- Roles
+
+
 
 ## CREATEDB.SQL
 In createdb.sql we create a database schema with five tables: Categories, Customer, Orders, Brands, and Products. 
@@ -24,3 +39,5 @@ We created 3 queries:
 - The second query calculates the number of orders in each month of the current year.
 
 - The third query calculates the total sales for the past 3 months.
+
+
