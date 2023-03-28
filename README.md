@@ -30,7 +30,7 @@ Each table has columns that define the structure of the data to be stored in it.
 
 - Categories table: CategoryID (an auto-incrementing integer), Name (a string up to 50 characters), and Description (a string up to 255 characters).
 
-- Customer table: CustomerID (an auto-incrementing integer), FirstName (a string up to 50 characters), LastName (a string up to 50 characters), Email (a custom data type email that is a string up to 100 characters and is unique), and PhoneNumber (a string up to 20 characters).
+- Customer table: CustomerID (an auto-incrementing integer), FirstName (a string up to 50 characters), LastName (a string up to 50 characters), Email (a custom data type email that makes you write something like xxxx@xxx.xxx), and PhoneNumber (a string up to 20 characters).
 
 - Orders table has five columns: OrderID (an auto-incrementing integer), CustomerID (a foreign key that references the Customer table on the CustomerID column), OrderDate (a date), TotalPrice (a decimal number with up to 10 digits and 2 decimal places), and PaymentStatus (a string up to 20 characters).
 
@@ -54,7 +54,30 @@ We created 3 queries:
 We have created a script that uses the psycopg2 library to connect to our PostgreSQL database and to insert an image. 
 We have described each step performed in UploadImage.py file to insert the image and SeeImage.py to see the image we have inserted.
 
+To execute the scripts that are in the .py files you must do the following.
+
+First install everything in the requirements.txt with the following command:
+
+`pip install -r requirements.txt`
+
+The lines of the database connection must also be changed, since that is from the docker container that we had locally.
+
+## Indexes
+
+We create the indexes of the category id in products and also of the customer id in orders.
+
+This was simply to simulate that we were creating indexes of the things that we anticipated would be used the most.
+
+## Users and privileges
+
+As you can see in the User_and_grant.sql file, we created a user named isaac with the password '2808'.
+
+We only gave him privileges to make selects in the product table.
+
+
 ## Conclusion
 
-With the work we have done, we have learned new things that we can integrate into our database. We found it very interesting to be able to combine Python with our PostgreSQL database and to be able to insert and collect data from it.
+With the work we have done, we have learned new things that we can integrate into our database. We found it very interesting to be able to combine Python with our PostgreSQL database and to be able to insert and collect images from it, even to open images directly with our Python application.
+
+We have found the domains quite interesting, it is something very useful if you want to be precise and strict with the data that can accept that column. The email example is very good.
 
