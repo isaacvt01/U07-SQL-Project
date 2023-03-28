@@ -49,10 +49,10 @@ We created 3 queries:
 - The third query calculates the total sales for the past 3 months.
 
 
-## UPLOADIMAGE.PY
+## UPLOADIMAGE.PY & SEEIMAGE.PY
 
 We have created a script that uses the psycopg2 library to connect to our PostgreSQL database and to insert an image. 
-We have described each step performed in UploadImage.py file to insert the image and SeeImage.py to see the image we inserted.
+We have described each step performed in UploadImage.py file to insert the image and SeeImage.py to see the image we have inserted.
 
 ## CONCLUSION
 
